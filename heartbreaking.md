@@ -119,7 +119,11 @@ Largely speculating, but in a standard scenario I this would more or less entail
 I've yet to actually try it myself. Not sure about speed. But, public domain!
 
 ### GnuTLS
-If your project is GPL, of course. Also, in case you didn't see the memo: GMP (starting with version 6.0.0) now once again allows GPL **2** licensing, and no longer forces LGPL3.
+If your project allows for LGPL3 or GPL2. GMP (starting with version 6.0.0) now once again allows GPL **2** licensing, and no longer forces LGPL3.
+
+### Other (full) GPL2 libraries
+- CyaSSL
+- PolarSSL
 
 ---
 

@@ -3,9 +3,9 @@
 _This text as originally written is in the format of response to [Sean Cassidy's post](http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html) regarding [The Heartbleed Bug](http://heartbleed.com), ([CVE](http://cve.mitre.org)-[2014-0160](http://www.kb.cert.org/vuls/id/720951A)) as linked from [Ars Technica](http://arstechnica.com/security/2014/04/critical-crypto-bug-in-openssl-opens-two-thirds-of-the-web-to-eavesdropping).
 It is a live document, and now resembles a FAQ. Changes are tracked by git:_
 
-- _pertains to the catastrophic vulnerabilities in [OpenSSL](http://openssl.org)._
+- It _pertains to the catastrophic vulnerabilities in [OpenSSL](http://openssl.org)._
 - It _(possibly) describes additional, yet-unpatched bug(s)._
-- _It discusses strategies for "the heartbroken"._
+- It _discusses strategies for "the heartbroken"._
 
 ## What is "heartbreaking"?
 
@@ -37,7 +37,12 @@ Note OpenSSL by default builds and links as a *static* library unless explicitly
 - To prevent accidentally calling "The Heartbleed Bug" the _Heartbreak_ Bug, by forcing a distinction (this is something I caught myself accidentally doing).
 
 ## Another bug?
-Yet to be fully described, but to reproduce on Darwin (current Mac OS X + Xcode):
+Yes. Its definitely a bug, though I'm not sure of its root cause, and I don't know its severity or if its exploitable. It may be like a bug I found in GMP last year; it may be related to Heartbleed; it may be something else altogether.
+
+Summary: when built with LTO/IPO (LLVM or Intel), OpenSSL will compile and pass 'make test'. However, if you then invoke `openssl speed`, it will soon loose its ability to count to three.
+
+I believe this should be enough to reproduce:
+(Code is for Darwin; I'm 99% confident this is not platform specific.)
 
 ```sh
 export CPPFLAGS=-flto
@@ -47,16 +52,17 @@ make -j1; make -j1 test
 ```
 
 At RC4, this will appear to loose the ability to count to three seconds.
-
 No error reported. Occurs in OpenSSL 1.0.1g.
 
-There are others but they seem more trivial. Like the "makedepend" thing.
+There are others; but they seem more trivial. Like "makedepend" and "domd".
 
-To be expanded.
+_To be expanded._
 
 ## You knew about this? Why didn't you report it?
 
-I'll explain more, but basically, **yep**. Short answer: FIPS and resultant we-don't-take-patches-from-US-citizens-unless-you-preclear-them-with-the-US-gov't policy. Note that (from a user standpoint) I did report an "identical bug" in GMP. GMP catches it in its test suite and you can find my proposed workaround on the GMP mailing list.
+Yes. Because of the OpenSSL project's decision to participate in US FIPS 140-2 product validation, they have a standing policy to not accept patches from US citizens, unless registered and pre-cleared first with the United States government. That is something I am absolutely unwilling to do, so I just sat on it.
+
+Note that (from a user standpoint, not a technical one) I did report an "identical bug" in GMP. GMP catches this in its test suite; and you can find my proposed workaround on the GMP mailing list.
 
 To be expanded.
 
@@ -64,7 +70,7 @@ To be expanded.
 
 No, definitely not. More like, I very strongly suspected "the Heartbreaking" was coming.
 
-To be expanded.
+_To be expanded._
 
 ## Could The Heartbleed Bug have been prevented?
 
@@ -72,33 +78,30 @@ Yes. IMO.
 
 >1. Pay money for security audits of critical security infrastructure like OpenSSL. ... I would donate to this effort. Would you?
 
-**No.** I am strongly of the opinion that this is how we got into this situation. This is not a problem that can be solved with dollars alone.
+**No.**
+I am strongly of the opinion that this is how we got into this situation.
+This is not a problem that can be solved by throwing dollars at it.
 
-It is also why the FIPS program is fundamentally misguided: you cannot "certify" against unknown future attack vectors. Maybe if you have powers of supernatural prescience.
-
-Instead, all it does is:
+It is also why the FIPS 140-2 validation program is fundamentally misguided: you cannot "certify" against unknown, future attack vectors. Maybe if you have powers of supernatural prescience. Instead, all it does is:
  - Give everyone a false sense of security; encourage complacence.
  - Divert time and resources.
- - Scream "exploit me".
 
-Consider if this were _war_, not just _cyberwar_: step one: don't get shot. Step one of step one: do not paint target on back.
+ - Scream "exploit me". The first step to winning a war: do not get shot and killed. The first step to not getting shot: do not paint target on back.
 
 ## I need to patch The Heartbleed Bug as of 9 A.M. yesterday.
 
 Possibilities in the short-term:
 
 - Rebuild with OpenSSL 1.0.1g (the 'patch'). I doubt this will be a permanent fix.
-- Revert to OpenSSL 0.9.8.
-- Use [CommonCrypto](http://www.opensource.apple.com/tarballs/CommonCrypto/CommonCrypto-60027.tar.gz) instead. Licensing is weird; but its a relatively easy patch that doesn't defer to current management. Not sure about portability.
+- Revert to OpenSSL 0.X.X
+- On Darwin , use [CommonCrypto](http://www.opensource.apple.com/tarballs/CommonCrypto/CommonCrypto-60027.tar.gz) instead. Not portable.
 
 ## Are the decent alternatives to consider in the long-term?
-
-I think so.
 
 > Given how difficult it is to write safe C, I don't see any other options.  
 > 3. Start writing alternatives in safer languages.
 
-[Botan](http://botan.randombit.net) is the replacement for OpenSSL adopted in [BIND 10](http://bind10.isc.org). It is written in aggressive C++11.
+[Botan](http://botan.randombit.net) is the replacement for OpenSSL adopted in [BIND 10](http://bind10.isc.org). It is written in C++11.
 
 _If unfamiliar, one may want to look into how STL performance guarantees work and compare the use of handwritten assembler in GnuTLS (via GMP) and OpenSSL (the BN library) for asymptotically fast operations._
 

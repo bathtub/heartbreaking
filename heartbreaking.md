@@ -60,9 +60,9 @@ I'll explain more, but basically, **yep**. Short answer: FIPS and resultant we-d
 
 To be expanded.
 
-## Are you claiming to have had prknown about Heartbleed?
+## Are you claiming to have had prior knowledge about Heartbleed?
 
-No, definintely not. But I very strongly suspected "the Heartbreaking" was coming.
+No, definintely not. More like, I very strongly suspected "the Heartbreaking" was coming.
 
 To be expanded.
 

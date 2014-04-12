@@ -1,6 +1,6 @@
 # The Heartbreaking: Heartbleed Healing
 
-_This text as originally written is in the format of response to [Sean Cassidy's post](http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html) regarding [The Heartbleed Bug](http://heartbleed.com),
+_This text as originally written is in the format of response to [Sean Cassidy's post](http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html) regarding [The Heartbleed Bug](http://heartbleed.com),  
 ([CVE](http://cve.mitre.org)-[2014-0160](http://www.kb.cert.org/vuls/id/720951A)) as linked from [Ars Technica](http://arstechnica.com/security/2014/04/critical-crypto-bug-in-openssl-opens-two-thirds-of-the-web-to-eavesdropping).
 It is a live document tracked by git, and now resembles a FAQ._
 
@@ -103,7 +103,7 @@ Possibilities in the short-term:
 > Given how difficult it is to write safe C, I don't see any other options.  
 > 3. Start writing alternatives in safer languages.
 
-### Botan
+#### Botan
 [Botan](http://botan.randombit.net) is the replacement for OpenSSL adopted in [BIND 10](http://bind10.isc.org). It is written in C++11.
 
 _If unfamiliar, one may want to look into how STL performance guarantees work and compare the use of handwritten assembler in GnuTLS (via GMP) and OpenSSL (the BN library) for asymptotically fast operations._
@@ -117,24 +117,20 @@ Largely speculating, but in a standard scenario I this would more or less entail
 - Eliminating use of C++ RTTI and exception handling, or pull in libc++abi (with now-included libunwind).
 - Write a C interface: take a look at the `llvm-c`/`clang-c` headers.
 
-### LibTomCrypt
+#### LibTomCrypt
 I've yet to actually try it myself. Not sure about speed. But, public domain!
 
-### GnuTLS
+#### GnuTLS
 If your project allows for LGPL3 or GPL2. GMP (starting with version 6.0.0) now once again allows GPL **2** licensing, and no longer forces LGPL3.
 
 Other (full) GPL2 libraries:
-
-### CyaSSL
-### PolarSSL
-
-===
-
-_License: Common sense; respect; customary copyright law._
-_If **you** need it for some reason: you may use [CC BY SA 4.0]( http://creativecommons.org/licenses/by/4.0)._
+#### CyaSSL
+#### PolarSSL
 
 ===
 
-##### Author: G. Nixon
-##### First public commit: 11 April 2014, ~12:00 P.M. UTC
+
+_Author: G. Nixon_
+_First public commit: 11 April 2014, ~12:00 P.M. UTC_
+_License: Common sense; respect; customary copyright law._ _If **you** need it for some reason: you may use [CC BY SA 4.0]( http://creativecommons.org/licenses/by/4.0)._
 

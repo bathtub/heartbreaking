@@ -88,7 +88,7 @@ This is not a problem that can be solved by throwing dollars at it.
 It is also why the FIPS 140-2 validation program is fundamentally misguided: one cannot "certify" against unknown, future attack vectors. Maybe if you have powers of supernatural prescience. Instead, all it does is:
  - Give everyone a false sense of security; encourage complacence.
  - Divert time and resources.
- - Scream "exploit me". The first step to winning a war: do not get shot and killed. The first step to not getting shot: do not paint target on back.
+ - Screams "exploit me". The first step to winning a war: do not get shot and killed. The first step to not getting shot: do not paint target on back.
 
 **Edit: this is same point made (much more saliently and eloquently, and with the qualifications to do so) by [Steve Marquess, here.](http://veridicalsystems.com/blog/secure-or-compliant-pick-one). I would consider that post to now be _required reading_.**
 

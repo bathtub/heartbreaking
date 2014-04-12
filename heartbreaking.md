@@ -90,7 +90,9 @@ It is also why the FIPS 140-2 validation program is fundamentally misguided: one
  - Divert time and resources.
  - Screams "exploit me". The first step to winning a war: do not get shot and killed. The first step to not getting shot: do not paint target on back.
 
-**Edit: this is same point made (much more saliently and eloquently, and with the qualifications to do so) by [Steve Marquess, here.](http://veridicalsystems.com/blog/secure-or-compliant-pick-one). I would consider that post to now be _required reading_.**
+Edit:
+**This is same point made (much more saliently and eloquently, and with the qualifications to do so) [by Steve Marquess](http://veridicalsystems.com/blog/secure-or-compliant-pick-one). _Required reading_.**
+_The FIPS module itself is not affected by heartbleed._
 
 ## I need to patch The Heartbleed Bug as of 9 A.M. yesterday.
 

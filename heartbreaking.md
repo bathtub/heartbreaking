@@ -1,6 +1,7 @@
 # The Heartbreaking: Heartbleed Healing
 
-_This text as originally written is in the format of response to [Sean Cassidy's post](http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html) regarding [The Heartbleed Bug](http://heartbleed.com), ([CVE](http://cve.mitre.org)-[2014-0160](http://www.kb.cert.org/vuls/id/720951A)) as linked from [Ars Technica](http://arstechnica.com/security/2014/04/critical-crypto-bug-in-openssl-opens-two-thirds-of-the-web-to-eavesdropping).
+_This text as originally written is in the format of response to [Sean Cassidy's post](http://blog.existentialize.com/diagnosis-of-the-openssl-heartbleed-bug.html) regarding [The Heartbleed Bug](http://heartbleed.com),
+([CVE](http://cve.mitre.org)-[2014-0160](http://www.kb.cert.org/vuls/id/720951A)) as linked from [Ars Technica](http://arstechnica.com/security/2014/04/critical-crypto-bug-in-openssl-opens-two-thirds-of-the-web-to-eavesdropping).
 It is a live document tracked by git, and now resembles a FAQ._
 
 - It _pertains to the catastrophic vulnerabilities in [OpenSSL](http://openssl.org)._
@@ -134,21 +135,6 @@ Other (full) GPL2 libraries:
 First public commit: 11 April 2014, ~12:00 P.M. UTC
 Author: G. Nixon
 
----
-I may come to having even posted this footnote?
-This was under the "prior knowledge" paragraph:
-
- I also thought (and continue to assert) that my, effectively, screaming some "the-sky-is-falling" 'nonsense' about obscure bugs in OpenSSL when built with LLVM LTO / Intel IPO resulting in a weird benchmark, would have been received like a crazy bum on a street corner spouting prophecy. I have no security background/resume per se; I have insufficient technical knowledge to myself authoritatively pinpoint the issue at its core. Hence if I at all appear to have "new information" here. If you want to say "BS", thats fine by me - its all in the past and quite irrelevant now. This is one (of others) reason I use an @aol.com email and have long since eliminated most social networks, etc. This is NOT a "claim", whatsoever, and NOT an invitation to "try me", but: it appears the only account I use regularly, or really care about, is, um, Github (sorta). Otherwise generally: AOL + OpenID, Apple ID, and one-off @grr.la email addresses. See my little script that generates fake-but-real name/phone/address combos from a statistically common names and a phone book. This is the full purpose of that script. If you don't believe me, please just go around saying I'm a POS liar trying to capitalize on a horrible situation, rather than, um, seeking to "punish" my non-"claim" here? I have no doubt you could do so, effortlessly, instantly. I don't even really use a particularly good passwords. That not my point, at all. I'm merely saying I had a hunch and tried to take precautions; and that it seems now, in hindsight, to possibly have been worth it. __To me.__
-
-http://www.dailysabah.com/technology/2014/04/11/the-heartbleed-hit-list-the-passwords-you-need-to-change-right-now
-https://www.hex-rays.com/products/ida/support/orderforms/floatingworld.pdf
-
-Build a TOC:
-* [What is "the Heartbreaking"?](#the-heartbreaking)
-* [Why this term?](#bar)
-* [License](#options)
-
----
 
 ## License
 _License: Common sense; respect; customary copyright law._

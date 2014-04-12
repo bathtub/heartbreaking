@@ -93,7 +93,6 @@ This is why the FIPS 140-2 validation program is fundamentally misguided: one ca
  - Screams "exploit me". To win at war, step 1: **do not get shot**. To not get shot, step 1: **do not paint target on back.**
 
 **This is same point made (much more saliently and eloquently, and with the qualifications to do so) [by Steve Marquess](http://veridicalsystems.com/blog/secure-or-compliant-pick-one).**  
-**__Required reading.__**  
 
 _The OpenSSL FIPS module itself is not affected by the Heartbleed bug._
 

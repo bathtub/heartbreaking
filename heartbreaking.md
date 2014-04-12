@@ -90,10 +90,10 @@ _Audit **your deployment** in its environment. Not the software, in a clean room
 This is why the FIPS 140-2 validation program is fundamentally misguided: one cannot "certify" against unknown, future attack vectors. Maybe if you have powers of supernatural prescience. Instead, all it does is:
  - Give everyone a false sense of security; encourage complacence.
  - Divert time and resources.
- - Screams "exploit me". To win a war, step 1: do not get shot. Not getting shot, step 1: do not paint target on back.
+ - Screams "exploit me". To win at war, step 1: **do not get shot**. To not get shot, step 1: **do not paint target on back.**
 
-Edit:  
-**This is same point made (much more saliently and eloquently, and with the qualifications to do so) [by Steve Marquess](http://veridicalsystems.com/blog/secure-or-compliant-pick-one). _Required reading_.**  
+**This is same point made (much more saliently and eloquently, and with the qualifications to do so) [by Steve Marquess](http://veridicalsystems.com/blog/secure-or-compliant-pick-one).**  
+**__Required reading.__**  
 
 _The OpenSSL FIPS module itself is not affected by the Heartbleed bug._
 

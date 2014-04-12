@@ -16,7 +16,7 @@ This whole thing is, really.
 
 A term I've just coined to name and describe:
 
-- *The process by which the Internet will heal itself from The Heartbleed Bug, etc.*
+- *The process by which the Internet will heal itself from The Heartbleed Bug, etc. Over the years.* 
 
 
 - Could also be put it: *the process of identifying, testing, and/or replacing every piece of "secure" software presently in deployment that possibly links OpenSSL 1.0.1[a-f].*
@@ -63,21 +63,21 @@ _To be expanded._
 
 ## You knew about this? Why didn't you report it?
 
-Yes. Because of the OpenSSL project's decision to participate in US FIPS 140-2 product validation, they have a standing policy to not accept patches from US citizens, unless registered and pre-cleared first with the United States government. That is something I am absolutely unwilling to do, so I just sat on it.
+Yes. Because of the OpenSSL project's decision to participate in US FIPS 140-2 product validation (see below), they have a standing policy to not accept patches from US citizens, unless registered and pre-cleared first with the United States government. That is something I am absolutely unwilling to do, so I just sat on it.
 
 Note that (from a user standpoint, not a technical one) I did report an "identical bug" in GMP. GMP catches this in its test suite; and you can find my proposed workaround on the GMP mailing list.
 
-To be expanded.
+_To be expanded._
 
-## Are you claiming to have had prior knowledge about Heartbleed?
+## Are you claiming you knew about Heartbleed?
 
-No, definitely not. More like, I very strongly suspected "the Heartbreaking" was coming.
+No, definitely not. More like, I very strongly suspected "the Heartbreaking" was coming, that's all.
 
 _To be expanded._
 
 ## Could The Heartbleed Bug have been prevented?
 
-Yes. IMO.
+Yes.
 
 >1. Pay money for security audits of critical security infrastructure like OpenSSL. ... I would donate to this effort. Would you?
 
@@ -85,11 +85,12 @@ Yes. IMO.
 I am strongly of the opinion that this is how we got into this situation.
 This is not a problem that can be solved by throwing dollars at it.
 
-It is also why the FIPS 140-2 validation program is fundamentally misguided: you cannot "certify" against unknown, future attack vectors. Maybe if you have powers of supernatural prescience. Instead, all it does is:
+It is also why the FIPS 140-2 validation program is fundamentally misguided: one cannot "certify" against unknown, future attack vectors. Maybe if you have powers of supernatural prescience. Instead, all it does is:
  - Give everyone a false sense of security; encourage complacence.
  - Divert time and resources.
-
  - Scream "exploit me". The first step to winning a war: do not get shot and killed. The first step to not getting shot: do not paint target on back.
+
+**Edit: this is same point made (much more saliently and eloquently, and with the qualifications to do so) by [Steve Marquess, here.](http://veridicalsystems.com/blog/secure-or-compliant-pick-one). I would consider that post to now be _required reading_.**
 
 ## I need to patch The Heartbleed Bug as of 9 A.M. yesterday.
 
@@ -128,7 +129,6 @@ Other (full) GPL2 libraries:
 #### PolarSSL
 
 ===
-
 _Author: G. Nixon_  
 _First public commit: 11 April 2014, ~12:00 P.M. UTC_  
 _License: Common sense; respect; customary copyright law._ _If **you** need it for some reason: you may use [CC BY SA 4.0]( http://creativecommons.org/licenses/by/4.0)._  

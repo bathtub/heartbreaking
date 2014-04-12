@@ -94,7 +94,8 @@ This is why the FIPS 140-2 validation program is fundamentally misguided: one ca
 
 Edit:  
 **This is same point made (much more saliently and eloquently, and with the qualifications to do so) [by Steve Marquess](http://veridicalsystems.com/blog/secure-or-compliant-pick-one). _Required reading_.**  
-_The FIPS module itself is not affected by the Heartbleed bug._
+
+_The OpenSSL FIPS module itself is not affected by the Heartbleed bug._
 
 ## I need to patch The Heartbleed Bug as of 9 A.M. yesterday.
 

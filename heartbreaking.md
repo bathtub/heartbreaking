@@ -82,10 +82,12 @@ Yes.
 >1. Pay money for security audits of critical security infrastructure like OpenSSL. ... I would donate to this effort. Would you?
 
 **No.**
-I am strongly of the opinion that this is how we got into this situation.
+I am strongly of the opinion that this is how we got into this situation in the first place.
 This is not a problem that can be solved by throwing dollars at it.
 
-It is also why the FIPS 140-2 validation program is fundamentally misguided: one cannot "certify" against unknown, future attack vectors. Maybe if you have powers of supernatural prescience. Instead, all it does is:
+_Audit your deployment, in its environment. Not the software itself, in a clean room._
+
+This is why the FIPS 140-2 validation program is fundamentally misguided: one cannot "certify" against unknown, future attack vectors. Maybe if you have powers of supernatural prescience. Instead, all it does is:
  - Give everyone a false sense of security; encourage complacence.
  - Divert time and resources.
  - Screams "exploit me". The first step to winning a war: do not get shot and killed. The first step to not getting shot: do not paint target on back.
@@ -134,4 +136,3 @@ Other (full) GPL2 libraries:
 _Author: G. Nixon_  
 _First public commit: 11 April 2014, ~12:00 P.M. UTC_  
 _License: Common sense; respect; customary copyright law._ _If **you** need it for some reason: you may use [CC BY SA 4.0]( http://creativecommons.org/licenses/by/4.0)._  
-

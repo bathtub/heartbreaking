@@ -94,8 +94,7 @@ It is also why the FIPS 140-2 validation program is fundamentally misguided: you
 
 Possibilities in the short-term:
 
-- Rebuild with OpenSSL 1.0.1g (the 'patch'). I doubt this will be a permanent fix.
-- Revert to OpenSSL 0.X.X
+- Rebuild with OpenSSL 1.0.1g (the 'patch'), or revert to OpenSSL pre-1.0.1. I doubt this will be a permanent fix.
 - On Darwin, use [CommonCrypto](http://www.opensource.apple.com/tarballs/CommonCrypto/CommonCrypto-60027.tar.gz) instead. Not portable.
 
 ## Are the decent alternatives to consider in the long-term?

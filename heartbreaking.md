@@ -85,7 +85,7 @@ Yes.
 I am strongly of the opinion that this is how we got into this situation in the first place.
 This is not a problem that can be solved by throwing dollars at it.
 
-_Audit your deployment, in its environment. Not the software itself, in a clean room._
+_Audit **your deployment** in its environment. Not the software, in a clean room._
 
 This is why the FIPS 140-2 validation program is fundamentally misguided: one cannot "certify" against unknown, future attack vectors. Maybe if you have powers of supernatural prescience. Instead, all it does is:
  - Give everyone a false sense of security; encourage complacence.

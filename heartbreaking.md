@@ -37,7 +37,9 @@ Note OpenSSL by default builds and links as a *static* library unless explicitly
 - To prevent accidentally calling "The Heartbleed Bug" the _Heartbreak_ Bug, by forcing a distinction (this is something I caught myself accidentally doing).
 
 ## Another bug?
-Yes. Its definitely a bug, though I'm not sure of its root cause, and I don't know its severity or if its exploitable. It may be like a bug I found in GMP last year; it may be related to Heartbleed; it may be something else altogether.
+Yes. Its definitely a bug, though I'm not sure of its root cause, and I don't know its severity or if its exploitable. ~~It may be like a bug I found in GMP last year; it may be related to Heartbleed; it may be something else altogether.~~
+
+**Edit: I now just realized (whatever _this_ bug is), that it affects OpenSSL 0.9.8+ as well. So, it isn't Heartbleed. If we're lucky, it could just be a bug in the built-in benchmarking functionality.**
 
 Summary: when built with LTO/IPO (LLVM or Intel), OpenSSL will compile and pass 'make test'. However, if you then invoke `openssl speed`, it will soon loose its ability to count to three.
 

@@ -96,7 +96,7 @@ Possibilities in the short-term:
 
 - Rebuild with OpenSSL 1.0.1g (the 'patch'). I doubt this will be a permanent fix.
 - Revert to OpenSSL 0.X.X
-- On Darwin , use [CommonCrypto](http://www.opensource.apple.com/tarballs/CommonCrypto/CommonCrypto-60027.tar.gz) instead. Not portable.
+- On Darwin, use [CommonCrypto](http://www.opensource.apple.com/tarballs/CommonCrypto/CommonCrypto-60027.tar.gz) instead. Not portable.
 
 ## Are the decent alternatives to consider in the long-term?
 
@@ -123,9 +123,10 @@ I've yet to actually try it myself. Not sure about speed. But, public domain!
 ### GnuTLS
 If your project allows for LGPL3 or GPL2. GMP (starting with version 6.0.0) now once again allows GPL **2** licensing, and no longer forces LGPL3.
 
-### Other (full) GPL2 libraries
-- CyaSSL
-- PolarSSL
+Other (full) GPL2 libraries:
+
+### CyaSSL
+### PolarSSL
 
 ---
 

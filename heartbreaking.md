@@ -130,12 +130,12 @@ Other (full) GPL2 libraries:
 
 ---
 
-## WIP:
-
-First public commit: 11 April 2014, ~12:00 P.M. UTC
-Author: G. Nixon
-
-
-## License
+## "License"
 _License: Common sense; respect; customary copyright law._
-_If **you** need it for some reason: you may use [CC BY SA 4.0]( http://creativecommons.org/licenses/by/4.0)._  
+_If **you** need it for some reason: you may use [CC BY SA 4.0]( http://creativecommons.org/licenses/by/4.0)._
+
+---
+
+###### Author: G. Nixon
+###### First public commit: 11 April 2014, ~12:00 P.M. UTC
+
